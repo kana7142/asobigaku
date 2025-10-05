@@ -1,0 +1,620 @@
+html { scroll-behavior: smooth;}
+body {
+margin: 0;
+margin-top:60px ;
+padding: 0;
+font-family:serif;
+background-attachment: fixed;
+background-image:url("/img/back.png");
+background-repeat:no-repeat;
+background-size: cover;
+}
+.body1{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  padding-bottom:100px ;
+  border-radius:15px;
+  background-color: #ffffff;
+  background-image: url("/img/back2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position:center bottom;
+}
+
+/* ひし形 */
+.mark img{
+  width:35px ;
+  height: 35px;
+}
+.mark{
+ text-align: center;
+ transform:translate(0px,-70px);
+}
+
+/* ｘと横線 */
+.xxx{
+  transform:translate(-50px,90px);
+}
+.xx{
+  transform:rotate(90deg);
+  text-align: left; 
+  width: 140px;
+}
+.x{
+  display: flex;
+  align-items: center;
+}
+.x p{
+ font-size: 14px ;
+ text-align: left;
+ color: #ec499a;
+ padding: 0;
+ margin: 0;
+ margin-right:10px ;
+}
+.head-border {
+    display: flex;
+    align-items: center;
+}
+/* 横線の長さ */
+.head-border:before {
+    content: "";
+    height: 1px;
+    width: 20px;
+    background-color: #ec499a;
+}
+.head-border:before {
+    margin-right:0;
+}
+.head-border img{
+  width: 22px;
+  height: 22px;
+  padding: 0;
+}
+
+
+/*ロゴ*/
+.logo {
+display: flex;
+}
+.logo img{height: 46vw;}
+#logo{
+    margin-top: 35vw;
+  margin-bottom: 0;
+}
+
+/* 固定 */
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10000;
+  margin-top:70px ;
+}
+
+/* 
+hamburger(ハンバーガーアイコン線)
+=================================== */
+.hamburger {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 50px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 300;
+}
+
+.hamburger__line {
+  position: absolute;
+  width: 40px;
+  height: 1px;
+  right: 0;
+  background-color: #ec499a;
+  transition: all 0.5s;
+}
+
+.hamburger__line--1 {
+  top: 1px;
+}
+
+.hamburger__line--2 {
+  top: 18px;
+}
+
+.hamburger__line--3 {
+  top: 36px;
+}
+
+/*ハンバーガーがクリックされたら*/
+.open .hamburger__line--1 {
+  transform: rotate(-45deg);
+  top: 11px;
+}
+
+.open .hamburger__line--2 {
+  opacity: 0;
+}
+
+.open .hamburger__line--3 {
+  transform: rotate(45deg);
+  top: 11px;
+}
+
+
+
+/* 
+sp-nav(ナビ)
+=================================== */
+.sp-nav {
+  position: fixed;
+  top: -100%;                /* 初期状態で非表示 */
+  left: 50%;                 /* 画面の横中心 */
+  transform: translateX(-50%);
+  width: 90%;                /* 画面幅の90% */
+  max-width: 500px;          /* 最大幅を固定 */
+  height: 40vh;
+  background-color: #b8b8b8;
+  transition: all 0.5s;
+  z-index: 200;
+  overflow-y: auto;
+  border-radius: 0 0 15px 15px;
+  text-align: left;          /* テキストを左寄せ */
+  padding: 20px;
+}
+
+ul{
+  width: 140px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+}
+
+/*ハンバーガーがクリックされたら上からスライド*/
+.open .sp-nav {
+  top: 0;
+}
+
+
+/* 
+black-bg(ハンバーガーメニュー解除用bg)
+=================================== */
+.black-bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 5;
+  background-color: #000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+  cursor: pointer;
+  z-index: 100;
+}
+
+/*ハンバーガーメニューが開いたら表示*/
+.open .black-bg {
+  opacity: 0.5;
+  visibility: visible;
+}
+a{
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 30px;
+}
+ul {
+  list-style: none;
+  text-align: left;
+  padding: 0;
+}
+.li2{
+  font-size: 13px;
+  margin: 0;
+  color: white;
+  margin-bottom: 18px;
+}
+
+.nav1{
+  text-align: center;
+}
+.nav-wrapper {
+width: 100%;
+}
+
+/*トップページ　文字*/
+h1{
+  text-align: center;
+  font-size: 65px;
+  color:rgb(0, 0, 0);
+  margin-top: 247px;
+  margin-bottom: 410px;
+}
+
+h2{
+  text-align: center;
+  display:inline-block;
+  color: #ffffff;
+  font-size: 28px;
+  background-color: #ec499a;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 0;
+  background: -moz-linear-gradient(left, #ec499a, #fff539);
+  background: -webkit-linear-gradient(left, #ec499a, #fff539);
+  background: linear-gradient(to right, #ec499a, #fff539);
+}
+.catch{
+  text-align: center;
+  width: 100%;
+}
+.g2t {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+p{
+  margin-bottom:15px;
+  font-size: 25px;
+}
+.g2t p{
+  text-align: left;
+  line-height: 3em;
+}
+.c p{
+  color: white;
+  
+}
+.c{
+  text-align: center;
+}
+
+
+
+/* スマホなど狭い画面で縦並びにしたい場合の例 */
+@media (max-width: 600px) {
+  .image-container {
+    flex-direction: column;
+  }
+  .square {
+    width: 100%;
+    padding-top: 100%; /* 縦並びでも正方形 */
+  }
+}
+
+
+
+/* ↓ スライドの外枠 */
+.slide-wrapper {
+  width: 100%;
+  height: 40%;
+  position: relative;
+  overflow: hidden; /* はみ出したスライドを隠す */
+  padding-bottom: 40px;
+}
+/*  ↓ スライド（コンテンツ） */
+.slide { /*スライド全体 */
+  width: 500%;   /* （スライド数）×100%にする*/
+  height: 100%;
+  display: flex;
+  transition: all 0.6s;
+}
+.slide div { /* スライド */
+  width: 33.33%;
+  height: 100%;
+  font-size: 16px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.slide1 { /* スライドさせるために必要なクラス */
+  transform: translateX(0);
+}
+.slide2 { /* スライドさせるために必要なクラス */
+  transform: translateX(-20%);
+}
+.slide3 { /* スライドさせるために必要なクラス */
+  transform: translateX(-40%);
+}
+.slide4 { /* スライドさせるために必要なクラス */
+  transform: translateX(-60%);
+}
+.slide5 { /* スライドさせるために必要なクラス */
+  transform: translateX(-80%);
+}
+.slide div:nth-of-type(1){ /* 背景色 */
+  background-color: #E1F3FC;
+}
+.slide div:nth-of-type(2){ /* 背景色 */
+  background-color: #FCE8F0;
+}
+.slide div:nth-of-type(3){ /* 背景色 */
+  background-color: #E3F1E4;
+}
+.slide div:nth-of-type(4){ /* 背景色 */
+  background-color: #e1b3d6;
+}
+/* ↓ 左右のボタン */
+.next {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  right: 10px;
+  bottom: 50%;
+  z-index: 10;
+  cursor: pointer;
+  border-top: solid 3px #ffffff;
+  border-right: solid 3px #ffffff;
+  -webkit-transform: rotate(45deg) translateY(50%);
+  transform: rotate(45deg) translateY(50%);
+}
+.prev {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: 30px; /* 位置調節 */
+  bottom: 50%;
+  z-index: 10;
+  cursor: pointer;
+  border-top: solid 3px #ffffff;
+  border-right: solid 3px #ffffff;
+  -webkit-transform: rotate(-135deg) translateY(-50%);
+  transform: rotate(-135deg) translateY(-50%);
+}
+/* ↓ インジケーター */
+.indicator {
+  width: 100%;
+  position: absolute;
+  bottom: 10px;
+  display: flex;
+   column-gap: 30px; /*ボタンの位置 */
+  z-index: 10; 
+  justify-content: center;
+  align-items: center;
+  transform: translate(0px,20px);
+}
+.indicator li {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  list-style: none;
+  background-color: #ffffff;
+  border: 1px #ec499a solid;
+  cursor: pointer;
+}
+.indicator li:first-of-type {
+  background-color: #ec499a;
+}
+ul.indicator img {
+ width: 20px;
+ margin-right: 50px;
+}
+
+
+/* テキスト横線付き */
+.catch2 {
+  font-size: 50px;
+  display: flex;
+  align-items: center; /* 垂直中心 */
+  justify-content: center; /* 水平中心 */
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.catch2:before, .catch2:after {
+  border-top: 2px solid;
+  content: "";
+  width: 30%; /* 線の長さ */
+}
+.catch2:before {
+  margin-right: 2em; /* 文字の右隣 */
+}
+.catch2:after {
+  margin-left: 2em; /* 文字の左隣 */
+}
+
+/* コンテンツ */
+.contents{
+  margin-top:80px;
+  margin-bottom:80px;
+}
+.field {
+display: flex; 
+justify-content:center;
+}
+.g1{
+ margin: 1vw;
+ margin-bottom: 0;
+}
+.g1 img{
+   width: 45vw; 
+}
+.title{
+  text-align: left;
+}
+
+/* about */
+.g2t p{
+  font-size: 12px;
+  line-height: 3em;
+  margin-bottom: 4em;
+}
+.g2t{ 
+}
+.g2 img{
+ width: 80%;
+}
+.g2 p{
+  color: #ec499a;
+  font-size: small;
+}
+.reverse {
+ text-align: right;
+}
+.about1{
+  margin-left: auto;
+  margin-right: 4px;
+  width: 220px;
+}
+
+
+/* ゲーム */
+.game{
+  text-align: right;
+  margin-right: 5px;
+}
+
+/* ボタン */
+/* 004 */
+.button004 a {
+    background: #ffffff;
+    border-radius: 60px;
+    /* position: relative; */
+    /* display: flex; */
+    /* justify-content: space-around; */
+    align-items: center;
+    margin: 0 auto;
+    max-width: 260px;
+    padding: 8px 25px;
+    color: #ec499a;
+    font-weight: 500;
+    text-decoration:none; 
+    font-size: 23px;
+    border-style: solid;
+    border-color: #cccccc;
+    border-width: 1px;
+}
+.button004{
+  width: 180px;
+  margin-bottom: 80px;
+  padding: 0px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 開催概要 */
+.access1{
+ margin:30px ;
+ margin-bottom: 0;
+ background-color: #f3fafd;
+ box-shadow: 8px 8px #ec499a;
+ padding-bottom: 1px;
+}
+.info{
+  transform: translate(0px,-12px);
+  text-align: center;
+}
+.access1-1{
+  
+}
+.txt3{
+  color: #ec499a;
+  margin-bottom: 3em;
+}
+.item{
+  margin-left: 3em;
+  margin-bottom: 0;
+ color: #ec499a;
+ font-weight: bolder;
+ font-size :12px;
+ width: 6em;
+ text-align: center;
+  background: -moz-linear-gradient(right, #ffb7db, #fbf695);
+  background: -webkit-linear-gradient(right, #ffb7db, #fbf695);
+  background: linear-gradient(to left, #ffb7db, #fbf695); 
+}
+
+.map{
+   text-align: center;
+}
+.txt3-1{
+  color: #ec499a;
+  font-size: 14px;
+  line-height: 2em;
+  margin-bottom: 1em;
+  margin-left: 2em;
+}
+/* GoogleMapはこちら　ボタン */
+/* 003 */
+.button003 a {
+    background: #eee;
+    border-radius: 60px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 260px;
+    padding: 10px 25px;
+    color: #313131;
+    font-weight: 500;
+    text-decoration:none; 
+    font-size: 20px;
+}
+/* up */
+.up{
+ text-align: center;
+ transform: translate(0px,50px);
+}
+.up img{
+  width: 55px;
+
+}
+
+/* クレジット部分 */
+.end{
+  background-color: #000;
+  padding: 5px;
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+.end p{
+  color: #ffffff;
+  font-size: 8px;
+}
+.endp3{
+  color: #ffffff;
+  font-size: 8px;
+}
+.endp1{
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  height: 18px;
+  width:30vw;
+}
+.end-in{
+  display: flex;
+  vertical-align: top;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.endp2{
+  text-align: left;
+  padding: 0;
+  margin: 0;
+  margin-left: 1em;
+  width: 90px;
+  line-height: 18px;
+}
+/* 横線 */
+.endp1:after {
+    content: "";
+    height: 0.5px;
+    flex-grow: 1;
+    background-color: #ffffff;
+    margin-left: 1rem;
+    transform: translate(0px,2px);
+}
+
+
+/*©のとこ*/
+.c{ text-align: center;
+  margin-top: 50px;
+  margin-bottom: 17px;
+  color:rgb(255, 255, 255);
+  font-size: 8px;
+}
